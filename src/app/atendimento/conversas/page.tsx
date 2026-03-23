@@ -33,9 +33,10 @@ const leadStatusConfig: Record<LeadStatus, { label: string; color: string; bg: s
   novo: { label: "Novo", color: "text-gray-400", bg: "bg-gray-500/15" },
   em_qualificacao: { label: "Em Qualificação", color: "text-amber-400", bg: "bg-amber-500/15" },
   qualificado: { label: "Qualificado", color: "text-emerald-400", bg: "bg-emerald-500/15" },
-  reuniao_agendada: { label: "Reunião Agendada", color: "text-blue-400", bg: "bg-blue-500/15" },
-  proposta_enviada: { label: "Proposta Enviada", color: "text-cyan-400", bg: "bg-cyan-500/15" },
-  contrato_assinado: { label: "Contrato Assinado", color: "text-green-400", bg: "bg-green-500/15" },
+  agendou_consulta: { label: "Agendou Consulta", color: "text-blue-400", bg: "bg-blue-500/15" },
+  compareceu_consulta: { label: "Compareceu", color: "text-cyan-400", bg: "bg-cyan-500/15" },
+  proposta_procedimento: { label: "Proposta Cirurgia", color: "text-purple-400", bg: "bg-purple-500/15" },
+  fechou_cirurgia: { label: "Fechou Cirurgia", color: "text-green-400", bg: "bg-green-500/15" },
   desqualificado: { label: "Desqualificado", color: "text-red-400", bg: "bg-red-500/15" },
 };
 

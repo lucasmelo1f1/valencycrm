@@ -596,7 +596,7 @@ export default function PaineisPage() {
 
               {/* Actions */}
               <div className="flex gap-2 pt-2">
-                {selectedLead.status !== "contrato_assinado" &&
+                {selectedLead.status !== "fechou_cirurgia" &&
                   selectedLead.status !== "desqualificado" && (
                     <button
                       onClick={() => moveToNextStage(selectedLead)}

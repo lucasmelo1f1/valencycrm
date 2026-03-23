@@ -49,15 +49,24 @@ export interface Contact {
   tags: string[];
 }
 
-export type LeadStatus =
-  | "novo"
-  | "em_qualificacao"
-  | "qualificado"
-  | "agendou_consulta"
-  | "compareceu_consulta"
-  | "proposta_procedimento"
-  | "fechou_cirurgia"
-  | "desqualificado";
+/**
+ * Source of truth for all lead statuses.
+ * Every status label/config/mock MUST derive from this array.
+ * To add a new stage, add it here and TypeScript will flag every
+ * Record<LeadStatus, …> that is missing the key.
+ */
+export const LEAD_STATUSES = [
+  "novo",
+  "em_qualificacao",
+  "qualificado",
+  "agendou_consulta",
+  "compareceu_consulta",
+  "proposta_procedimento",
+  "fechou_cirurgia",
+  "desqualificado",
+] as const;
+
+export type LeadStatus = (typeof LEAD_STATUSES)[number];
 
 export type ContactOrigin = "whatsapp" | "site" | "indicacao" | "google_ads" | "instagram";
 
